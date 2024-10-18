@@ -28,7 +28,6 @@ class authControllers {
 
     static async registerPost(req, res){
         const {password, confirmPassword, email, name} = req.body
-        console.log(email)
 
         if(password != confirmPassword){
             console.log("Senhas diferentes")
@@ -36,7 +35,6 @@ class authControllers {
         }
 
         const userExist = await User.findOne({where:{email:email}})
-        console.log(userExist)
 
         if(userExist){
             console.log("Usuário já existe no seu bando de dados")
