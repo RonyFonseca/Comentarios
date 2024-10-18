@@ -6,14 +6,6 @@ import sessionFile from "session-file-store";
 
 import path from "path"
 import os from "os"
-import { fileURLToPath } from 'url';
-
-// Obtenha o diretório atual
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Agora você pode usar __dirname normalmente
-
 
 //models
 import Coment from "./models/Coment.js"
@@ -37,7 +29,9 @@ const app = express()
 app.use(express.json())
 
 //handlebars
-app.engine('hbs', exphbs.engine({
+app.engine('handlebars', exphbs.engine({
+    extname: 'handlebars',
+    defaultLayout: 'main',
 
     runtimeOptions: {
         allowProtoPropertiesByDefault: true,
@@ -45,12 +39,8 @@ app.engine('hbs', exphbs.engine({
     }
 
     }))
-
-const currentFilePath = fileURLToPath(import.meta.url);
-const currentDirectory = path.dirname(currentFilePath);
-
-app.set('views', path.join(currentDirectory, 'views'));
-app.set("view engine", "hbs")
+app.set("view engine", "handlebars")
+app.set("views", "./views")
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
