@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize("railway", "root", "jcygEUZDFkvKXYyAfymPbsdCJLMwKVOp", {
     host: "junction.proxy.rlwy.net",
-    port: 17914,
+    port: 26752,
     dialect: "mysql"
 })
 
