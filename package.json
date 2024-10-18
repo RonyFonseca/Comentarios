@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -24,9 +27,5 @@
     "nodemon": "^3.1.6",
     "sequelize": "^6.37.3",
     "session-file-store": "^1.5.0"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   }
-
 }
