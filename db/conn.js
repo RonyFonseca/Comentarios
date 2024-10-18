@@ -1,11 +1,11 @@
 import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize("railway", "root", "mfZQSlflaJeuKjJOwRhFuQCGIrmbDikB", {
+const sequelize = new Sequelize("railway", "root", "jcygEUZDFkvKXYyAfymPbsdCJLMwKVOp", {
     host: "junction.proxy.rlwy.net",
-    port: 26752,
+    port: 17914,
     dialect: "mysql"
 })
-// mysql://root:mfZQSlflaJeuKjJOwRhFuQCGIrmbDikB@junction.proxy.rlwy.net:26752/railway
+
 try{
     console.log("Está conectado ao banco")
     sequelize.authenticate()
