@@ -37,9 +37,7 @@ const app = express()
 app.use(express.json())
 
 //handlebars
-app.engine('handlebars', exphbs.engine({
-    extname: 'handlebars',
-    defaultLayout: 'main',
+app.engine('hbs', exphbs.engine({
 
     runtimeOptions: {
         allowProtoPropertiesByDefault: true,

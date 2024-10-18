@@ -23,6 +23,7 @@
     "express-flash": "^0.0.2",
     "express-handlebars": "^8.0.1",
     "express-session": "^1.18.0",
+    "hbs": "^4.2.0",
     "mysql2": "^3.11.3",
     "nodemon": "^3.1.6",
     "sequelize": "^6.37.4",
