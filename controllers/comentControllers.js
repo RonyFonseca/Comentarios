@@ -39,8 +39,9 @@ class comentControllers {
         const id = req.session.UserId
 
         const coments = await User.findOne({where:{id:id},include:Coment, plain: true})
+        console.log(coments)
 
-        if(coments!= 0){
+        if(coments != 0){
             const coment = coments.Coments.map((e) => e.dataValues);
             res.render("dashboard/dashboard", {coment})
         }else {
