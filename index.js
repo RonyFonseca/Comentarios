@@ -74,7 +74,7 @@ app.use("/", authRoutes)
 app.use("/coment", comentRoutes)
 
 db.sync().then(()=>{
-    app.listen(3306)
+    app.listen(3000)
 })
 
 
