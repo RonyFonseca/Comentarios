@@ -1,10 +1,11 @@
 import { Sequelize } from "sequelize";
+import mysql2 from "mysql2";
 
 const sequelize = new Sequelize("railway", "root", "jcygEUZDFkvKXYyAfymPbsdCJLMwKVOp", {
     host: "junction.proxy.rlwy.net",
     port: 17914,
     dialect: "mysql",
-    dialectModule: "mysql2"
+    dialectModule: mysql2
 })
 
 
