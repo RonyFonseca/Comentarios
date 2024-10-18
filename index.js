@@ -6,6 +6,14 @@ import sessionFile from "session-file-store";
 
 import path from "path"
 import os from "os"
+import { fileURLToPath } from 'url';
+
+// Obtenha o diretório atual
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Agora você pode usar __dirname normalmente
+
 
 //models
 import Coment from "./models/Coment.js"
@@ -39,8 +47,11 @@ app.engine('handlebars', exphbs.engine({
     }
 
     }))
-    
-app.set('views', path.join(__dirname, 'views'))
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(__filename);
+
+app.set('views', path.join(process.cwd(), 'views'));
 app.set("view engine", "handlebars")
 app.set("views", "./views")
 
