@@ -48,10 +48,10 @@ app.engine('handlebars', exphbs.engine({
 
     }))
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const currentFilePath = fileURLToPath(import.meta.url);
+const currentDirectory = path.dirname(currentFilePath);
 
-app.set('views', path.join(process.cwd(), 'views'));
+app.set('views', path.join(currentDirectory, 'views'));
 app.set("view engine", "handlebars")
 
 app.use(express.urlencoded({extended: true}))
