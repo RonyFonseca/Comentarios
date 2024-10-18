@@ -6,6 +6,7 @@ const sequelize = new Sequelize("railway", "root", "jcygEUZDFkvKXYyAfymPbsdCJLMw
     dialect: "mysql"
 })
 
+
 try{
     console.log("Está conectado ao banco")
     sequelize.authenticate()
