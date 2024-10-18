@@ -51,8 +51,8 @@ app.engine('handlebars', exphbs.engine({
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirectory = path.dirname(currentFilePath);
 
-app.set('views', path.join(currentDirectory, './views'));
-app.set("view engine", "handlebars")
+app.set('views', path.join(currentDirectory, 'views'));
+app.set("view engine", "hbs")
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
