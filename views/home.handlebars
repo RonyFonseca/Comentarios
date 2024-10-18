@@ -1,0 +1,13 @@
+<div class="comentarios">
+    {{#each coments}}
+        <div class="card-comentario">
+            <div class="title">
+                <h2>{{this.title}}</h2>
+            </div>
+            <div class="content">
+                <textarea name="content" disabled>{{this.content}}</textarea>
+            </div>
+            <i class="bi bi-person-circle"><p>{{this.User.name}}</p> </i>
+        </div>
+    {{/each}}
+</div>

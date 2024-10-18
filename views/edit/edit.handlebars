@@ -1,0 +1,43 @@
+<div class="container" style="margin: 100px auto 100px;">
+    <h2 style="margin-left: 0px;">Editar</h2>
+    <form action="/coment/edit/post" method="POST" id="dashboard">
+        <input type="hidden" name="id" value="{{result.dataValues.id}}">
+        <div>
+            <div class="control-form">
+                <i><input type="text" name="title" placeholder="Digite seu titulo" value="{{result.dataValues.title}}" id="title"> </i>
+                <ul style="list-style: none; display: flex; gap: 5px; margin-top: 5px">
+                    <li><input type="button" name="emoji" value="&#128512;" class="emoji-button"></li>
+                    <li><input type="button" name="emoji" value="&#128151;" class="emoji-button"></li>
+                    <li><input type="button" name="emoji" value="&#9749;" class="emoji-button"></li>
+                    <li><input type="button" name="emoji" value="&#128293;" class="emoji-button"></li>
+                </ul>
+            </div>
+            <div class="control-form">
+                <div><label>Digite seu comentário:</label></div>
+                <textarea name="content">{{result.dataValues.content}}</textarea>
+            </div>
+        </div>
+        <div class="content-links" style="margin-left: 0px;"><input type="submit" value="Editar"></div>
+    </form>
+</div>
+<script>
+    const buttao = document.querySelectorAll(".emoji-button")
+    const input = document.getElementById("title")
+
+    buttao.forEach( button => {
+        button.addEventListener("click", ()=> {
+            const start = input.selectionStart; // Posição inicial do cursor
+            const end = input.selectionEnd; // Posição final do cursor
+            const value = input.value;
+
+            // Insere o emoji na posição do cursor
+            input.value = value.slice(0, start) + button.value + value.slice(end);
+
+            // Reposiciona o cursor logo após o emoji inserido
+            input.setSelectionRange(start + button.value.length, start + button.value.length);
+
+            // Foco de volta no input para manter o cursor ativo
+            input.focus();
+        })
+    })
+</script>

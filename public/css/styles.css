@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+}
+
+/* cabecario */
+
+#cabecario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+#logo {
+    width: 65px;
+}
+
+#cabecario > nav {
+    width: 400px
+}
+
+#cabecario > nav > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#cabecario > nav > ul > li > a {
+    font-size: 23px;
+    color: black; 
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Login */
+.container {
+    width: 500px;
+    margin: 200px auto;
+}
+
+.container > h2 {
+    margin: 0px 0px 20px 35px;
+    font-size: 30px;
+    border-bottom: 3px solid rgb(78, 78, 78);
+    max-width: 200px;
+    color: rgb(78, 78, 78)
+}
+
+.container > form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-form > i {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgb(78, 78, 78);
+}
+
+.control-form > i > input{
+    height: 40px;
+    width: 400px;
+    font-size: 17px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(104, 104, 104);
+}
+
+.control-form > textarea {
+    height: 200px;
+    width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.theme {
+    text-decoration: underline;
+    color: #5271ff,
+}
+
+.content-links {
+    margin-left: 40px;
+}
+
+.content-links > p {
+    margin-top: 4px;
+}
+
+.content-links > input {
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    border: none;
+    background-color: lightblue;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.content-links > input:hover{
+    background-color: rgb(145, 205, 224);
+    transform: scale(1.1);
+}
+
+/* home */
+.comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card-comentario {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    border: 1px solid rgb(168, 168, 168);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-comentario > .title {
+    position: relative;
+}
+
+.card-comentario > .title > h2 {
+    border-bottom: 3px solid rgb(78, 78, 78);
+    position: absolute;
+    color:  rgb(78, 78, 78);
+}
+
+.card-comentario > .content {
+    margin-top: 45px;
+    margin-bottom: 5px;
+}
+
+.card-comentario > .content > textarea {
+    border: none; 
+    height: 100px;
+    width: 300px;
+    padding: 0;
+    line-height: normal;
+}
+
+.card-comentario > i {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: rgb(114, 190, 216);
+    text-decoration: underline;
+    margin-top: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+#coment-you {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.my-coment-card {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.my-coment-card > form > .delete {
+    background-color: red;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.my-coment-card > form > .edit {
+    background-color: green;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
